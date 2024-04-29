@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final EditText editdata = (EditText) findViewById(R.id.editdata);
+
+        final Button btn=(Button) findViewById(R.id.btnreaddata);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String data;
@@ -44,9 +47,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    final EditText editdata = (EditText) findViewById(R.id.editdata);
-
-    final Button btn=(Button) findViewById(R.id.btnreaddata);
-
 }
