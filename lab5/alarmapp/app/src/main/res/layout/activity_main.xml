@@ -1,40 +1,24 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alarmRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="60sp"
-        android:orientation="horizontal"
-        android:background="#009944">
+        android:layout_height="match_parent"
+        android:layout_above="@id/addAlarmFab" />
 
-        <TextView
-            android:layout_width="305dp"
-            android:layout_height="match_parent"
-            android:text="Alarm"
-            android:textColor="@color/white"
-            android:paddingStart="90sp"
-            android:textSize="40sp"
-            tools:ignore="HardcodedText,RtlSymmetry" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Save"
-            android:textColor="@color/black"
-            android:backgroundTint="#009944"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText" />
-
-    </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout>
-
-</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addAlarmFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add Alarm"
+        android:tint="@android:color/white" />
+</RelativeLayout>
